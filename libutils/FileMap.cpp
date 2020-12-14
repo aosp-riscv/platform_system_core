@@ -35,6 +35,7 @@
 
 #if !defined(__MINGW32__)
 #include <sys/mman.h>
+#include <linux/mman.h>
 #endif
 
 #include <string.h>

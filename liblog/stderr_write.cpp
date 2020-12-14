@@ -56,8 +56,8 @@ struct stderrContext {
 
 struct android_log_transport_write stderrLoggerWrite = {
     .node = {&stderrLoggerWrite.node, &stderrLoggerWrite.node},
-    .context.priv = NULL,
     .name = "stderr",
+    .context = {.priv = NULL},
     .available = stderrAvailable,
     .open = stderrOpen,
     .close = stderrClose,

@@ -29,6 +29,7 @@
 #define PROT_WRITE 2
 #else
 #include <sys/mman.h>
+#include <linux/mman.h>
 #endif
 
 namespace android {

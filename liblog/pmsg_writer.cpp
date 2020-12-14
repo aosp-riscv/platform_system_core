@@ -42,8 +42,8 @@ static int pmsgWrite(log_id_t logId, struct timespec* ts, struct iovec* vec, siz
 
 struct android_log_transport_write pmsgLoggerWrite = {
     .node = {&pmsgLoggerWrite.node, &pmsgLoggerWrite.node},
-    .context.fd = -1,
     .name = "pmsg",
+    .context = {.fd = -1},
     .available = pmsgAvailable,
     .open = pmsgOpen,
     .close = pmsgClose,

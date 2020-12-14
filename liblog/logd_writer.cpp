@@ -50,8 +50,8 @@ static int logdWrite(log_id_t logId, struct timespec* ts, struct iovec* vec, siz
 
 struct android_log_transport_write logdLoggerWrite = {
     .node = {&logdLoggerWrite.node, &logdLoggerWrite.node},
-    .context.sock = -EBADF,
     .name = "logd",
+    .context = {.sock = -EBADF},
     .available = logdAvailable,
     .open = logdOpen,
     .close = logdClose,

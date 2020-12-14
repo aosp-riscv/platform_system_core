@@ -19,6 +19,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <sys/mman.h>
+#include <linux/mman.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
